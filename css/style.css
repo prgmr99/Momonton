@@ -1,0 +1,31 @@
+@import "center.css";
+@import "clock.css";
+@import "main.css";
+@import "todo.css";
+@import "location.css";
+@import "weather.css";
+
+.hidden {
+    display: none;
+}
+
+.quotes {
+    position:fixed;
+    left: 100px;
+    top: 650px;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: oblique;
+}
+
+img {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left: 0px;
+    top: 0px;
+    right:0px;
+    bottom:0px;
+    z-index: -1;
+    opacity:80%;
+}
