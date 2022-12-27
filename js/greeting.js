@@ -1,5 +1,5 @@
 const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
+const loginInput = document.querySelector("#login-form input"); // login-form id를 가지는 태그 아래 있는 input에 접근
 const greeting = document.querySelector("#greeting");
 
 // 가장 위의 선언을 하지 않고 한줄로 작성이 가능하다.
@@ -15,19 +15,19 @@ const USERNAME_KEY = "username";
 // 그것을 막기위해 preventDefault를 사용한다.
 function onLoginSubmit(event) {
     event.preventDefault();
-    loginForm.classList.add(HIDDEN_CLASSNAME);
+    loginForm.classList.add(HIDDEN_CLASSNAME); // loginForm이 접근하는 태그의 class를 추가
     const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username);
+    localStorage.setItem(USERNAME_KEY, username); // localStorage에 key와 value 추가
     paintGreeting(username);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit); 
 
-const savedUsername = localStorage.getItem(USERNAME_KEY); 
+const savedUsername = localStorage.getItem(USERNAME_KEY); // localStorage의 key와 매칭되는 value를 savedUsername에 저장
 
 function paintGreeting(username) {
     greeting.innerText = `Hello, ${username}`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    greeting.classList.remove(HIDDEN_CLASSNAME); // greeting이 접근하는 태그의 class를 제거
 }
 
 if(savedUsername === null) {

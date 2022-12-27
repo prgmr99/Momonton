@@ -1,7 +1,7 @@
 // localStorage는 데이터베이스가 아니다.
 // console에서 보면 toDos.array가 데이터베이스이다.
 // localStorage는 단순히 toDos.array를 복사해놓는 곳이다.
-// toDos.array != localStorage 인 것을 인지하고 있어야한다.
+// toDos.array != localStorage인 것을 인지하고 있어야한다.
 
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
@@ -54,9 +54,10 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
+
 if(savedToDos) {
-    const parsedToDos = JSON.parse(savedToDos);
-    toDos = parsedToDos; 
+    const parsedToDos = JSON.parse(savedToDos); // json에 저장되어 있는 데이터들은 String 타입이다. list형태로 변환
+    toDos = parsedToDos;  // 기존의 todos의 데이터를 유지하기 위해
     parsedToDos.forEach(paintToDo);
 }
 

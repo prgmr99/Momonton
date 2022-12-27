@@ -40,12 +40,16 @@ const quotes = [
       quote: "Travel expands the mind and fills the gap.",
       author: "Sheda Savage",
     },
-  ];
+];
 
-  const quote = document.querySelector("#quote span:first-child");
-  const author = document.querySelector("#quote span:last-child");
+// quote라는 id를 가진 태그 아래 span이 있다. 
+// span이 두 개가 있는데 quote는 첫 번째 span에 접근
+// author은 두 번째 span에 접근
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
 
-  const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+// quotes 리스트에서 랜덤으로 index를 추출
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-  quote.innerText = `"${todaysQuote.quote}"`;
-  author.innerText = `- ${todaysQuote.author}`;
+quote.innerText = `"${todaysQuote.quote}"`;
+author.innerText = `- ${todaysQuote.author}`;
