@@ -33,7 +33,7 @@ const quotes = [
       author: "Hemmingway",
     },
     {
-      quote: "We wander for distraction, but we travel for fulfilment.",
+      quote: "We wander for distraction, but we travel for fulfillment.",
       author: "Hilaire Belloc",
     },
     {
